@@ -70,7 +70,7 @@ export default new Vuex.Store({
     },
     updateQuestion ({commit}, payload) {
       console.log(payload, 'ini actin')
-      axios.post(`http://localhost:3000/answers/${payload.quesid}`, {
+      axios.post(`http://35.197.129.37:3050/answers/${payload.quesid}`, {
         answer: payload.comment
       }, {
         headers: {
@@ -81,13 +81,13 @@ export default new Vuex.Store({
       }).catch(err => { console.log(err) })
     },
     getAllQuestions ({commit}, payload) {
-      axios.get('http://localhost:3000/questions').then(({ data }) => {
+      axios.get('http://35.197.129.37:3050/questions').then(({ data }) => {
         commit('setDataQuestions', data.data)
       }).catch(err => console.log(err))
     },
     upvoteAnswer ({commit}, payload) {
       console.log('masuk sini', payload)
-      axios.put('http://localhost:3000/answers', {
+      axios.put('http://35.197.129.37:3050/answers', {
         answerid: payload.id,
         vote: payload.status
       }, {
@@ -106,7 +106,7 @@ export default new Vuex.Store({
     },
     qdownvote ({commit}, payload) {
       console.log('masuk sini')
-      axios.put('http://localhost:3000/questions/', {
+      axios.put('http://35.197.129.37:3050/questions/', {
         questionid: payload.id,
         vote: payload.status
       }, {
