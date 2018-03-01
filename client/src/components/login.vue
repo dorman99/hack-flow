@@ -7,7 +7,7 @@
 								<article class="card is-rounded">
                 <div class="card-content">
                   <div class="field">
-                      <label class="label">Username</label>
+                      <label class="label">Email: </label>
                       <div class="control has-icons-left has-icons-right">
                         <input  @keyup.enter="loggedin" name="email" @input="checkemail" :class="form.email" v-model="login.email" type="email" placeholder="Text input">
                         <span class="icon is-small is-left">
@@ -19,7 +19,7 @@
                       </div>
                       <p v-show="form.statusEmail" class="help is-danger">invalid email input</p>
                   </div>
-                  <label class="label">Password</label>
+                  <label class="label">Password:</label>
                   <p class="control has-icon">
                     <input @keyup.enter="loggedin" name="password" class="input" v-model="login.password" type="password" placeholder="Password">
                     <span class="icon is-small is-left">
@@ -60,7 +60,7 @@
                 <article class="card is-rounded">
                 <div class="card-content">
                   <div class="field">
-                      <label class="label">Username</label>
+                      <label class="label">Email: </label>
                       <div class="control has-icons-left has-icons-right">
                         <input @keyup.enter="signupe" name="email" @input="checkemailS" :class="formS.email" v-model="signup.email" type="email" placeholder="Text input">
                         <span class="icon is-small is-left">
@@ -72,7 +72,7 @@
                       </div>
                       <p v-show="formS.statusEmail" class="help is-danger">invalid email input</p>
                   </div>
-                  <label class="label">Password</label>
+                  <label class="label">Password:</label>
                   <p class="control has-icon">
                     <input @keyup.enter="signupe" name="password" @input="checkPasswordS" :class="formS.password" v-model="signup.password" class="input" type="password" placeholder="Password">
                     <span class="icon is-small is-left">
